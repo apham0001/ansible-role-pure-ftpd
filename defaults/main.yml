@@ -1,4 +1,7 @@
 ---
+
+initd_dir: "/etc/init.d"
+
 pureftpd_packages:
   - pure-ftpd-common
   - pure-ftpd

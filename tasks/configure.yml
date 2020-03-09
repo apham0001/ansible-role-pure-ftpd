@@ -12,20 +12,16 @@
   set_fact:
     pureftpd_config_compiled: "{{ pureftpd_config }}"
 
-- include: configure-fortune.yml
-  static: false
+- include_tasks: configure-fortune.yml
   when: pureftpd_fortune | length > 0
 
-- include: configure-mysql.yml
-  static: false
+- include_tasks: configure-mysql.yml
   when: pureftpd_mysql | length > 0
 
-- include: configure-postgresql.yml
-  static: false
+- include_tasks: configure-postgresql.yml
   when: pureftpd_postgresql | length > 0
 
-- include: configure-ldap.yml
-  static: false
+- include_tasks: configure-ldap.yml
   when: pureftpd_ldap | length > 0
 
 - name: Get current configuration.

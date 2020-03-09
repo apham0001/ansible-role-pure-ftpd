@@ -6,3 +6,10 @@
   service:
     name: pure-ftpd
     state: restarted
+  when: pure_ftpd_initd.stat.exists
+
+- name: restart Pure-FTPd-Mysql
+  service:
+    name: pure-ftpd-mysql
+    state: restarted
+  when: pure_ftpd_mysql_initd.stat.exists

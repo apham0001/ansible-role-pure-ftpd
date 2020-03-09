@@ -1,14 +1,11 @@
 ---
-- include: tls-certificate-certbot.yml
-  static: false
+- include_tasks: tls-certificate-certbot.yml
   when: pureftpd_tls_certificate_method == 'certbot'
 
-- include: tls-certificate-generate.yml
-  static: false
+- include_tasks: tls-certificate-generate.yml
   when: pureftpd_tls_certificate_method == 'generate'
 
-- include: tls-certificate-upload.yml
-  static: false
+- include_tasks: tls-certificate-upload.yml
   when: pureftpd_tls_certificate_method == 'upload'
 
 - name: Verify TLS certificate exists.

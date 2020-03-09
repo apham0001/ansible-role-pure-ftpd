@@ -6,7 +6,7 @@
     owner: root
     group: root
     mode: '0600'
-  notify: restart Pure-FTPd
+  notify: restart Pure-FTPd-Mysql
 
 - name: Ensure MySQLConfigFile value
   set_fact:

@@ -1,8 +1,17 @@
 ---
 - name: Ensure Pure-FTPd is installed.
   apt:
-    name: "{{ item }}"
+    name: "{{ pureftpd_packages }}"
     state: present
     cache_valid_time: 86400
     update_cache: yes
-  with_items: "{{ pureftpd_packages }}"
+
+- name: Stat Pure-FTPd systemd unit.
+  stat:
+    path: "{{ initd_dir }}/pure-ftpd"
+  register: pure_ftpd_initd
+
+- name: Stat Pure-FTPd-Mysql systemd unit.
+  stat:
+    path: "{{ initd_dir }}/pure-ftpd-mysql"
+  register: pure_ftpd_mysql_initd

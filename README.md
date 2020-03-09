@@ -273,7 +273,7 @@ Example Playbook
 
     - hosts: webservers
       roles:
-         - gcoop-libre.pure-ftpd
+         - apham0001.pure-ftpd
 
 License
 -------

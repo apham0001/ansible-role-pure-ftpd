@@ -2,9 +2,10 @@
 dependencies: []
 
 galaxy_info:
-  author: gcoop-libre
+  author: gcoop-libre / apham0001
+  role_name: pure_ftpd
   description: Pure-FTPd for Debian/Ubuntu
-  company: gcoop Cooperativa de Software Libre
+  company: gcoop Cooperativa de Software Libre / Webedia
   license: GPLv2
   min_ansible_version: 2.0
   platforms:
@@ -16,7 +17,6 @@ galaxy_info:
         - all
   galaxy_tags:
     - pureftpd
-    - pure-ftpd
     - ftp
     - ftps
     - tls
